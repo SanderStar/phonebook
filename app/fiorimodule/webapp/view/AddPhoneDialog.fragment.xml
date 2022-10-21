@@ -1,0 +1,25 @@
+<c:FragmentDefinition xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:c="sap.ui.core">
+    <Dialog title="Add Phone">
+        <f:SimpleForm editable="true" layout="ResponsiveGridLayout">
+            <f:content>
+                <Label text="Name" />
+                <Input value="{name}" />
+                <Label text="Type" />
+                <Select selectedKey="{type}">
+                    <items>
+                        <c:Item text="Home" key="H"/>
+                        <c:Item text="Mobile" key="M"/>
+                        <c:Item text="Work" key="W"/>
+                        <c:Item text="Unknown" key="X"/>
+                    </items>
+                </Select>
+                <Label text="Number" />
+                <Input value="{number}" type="Number" />
+            </f:content>
+        </f:SimpleForm>
+        <buttons>
+            <Button text="Save"  type="Accept" press="onSaveDialog" />
+            <Button text="Cancel"  type="Reject" press="onCancelDialog" />      
+        </buttons>
+    </Dialog>
+</c:FragmentDefinition>

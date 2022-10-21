@@ -1,0 +1,45 @@
+<mvc:View controllerName="creetion.training.cap.fiorimodule.controller.View" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="My phonebook">
+                    <content>
+                        <Table items="{ path: '/Phonebooks', sorter: { path: 'name' } }" mode="Delete" delete="handleDeleteButton">
+                                <headerToolbar>
+                                    <OverflowToolbar>
+                                        <content>
+                                            <Title text="My Phonebook" level="H2"/>
+                                            <ToolbarSpacer />
+                                            <Button icon="sap-icon://add" press="openAddPhoneDialog" />
+                                        </content>
+                                    </OverflowToolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="50px" vAlign="Middle" />
+                                    <Column />
+                                    <Column hAlign="End" />
+                                </columns>
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <core:Icon src="{path:'type',formatter:'.formatPhoneType'}" size="200%" />
+                                            <Input value="{name}" />
+                                            <Input value="{number}" type="Number" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                    </content>
+                    <footer>
+                        <OverflowToolbar>
+                            <ToolbarSpacer/>
+                            <Button text="Save" type="Accept" press="handleSaveButton"/>
+                            <Button text="Cancel" type="Reject" press="handleCancelButton"/>
+                        </OverflowToolbar>
+                    </footer>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
+

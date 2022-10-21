@@ -1,0 +1,99 @@
+{
+    "name": "Phonebook",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@sap/cds": "^6",
+        "@sap/cds-odata-v2-adapter-proxy": "^1.9.10",
+        "@sap/hana-client": "^2.14.22",
+        "@sap/xsenv": "^3.3.2",
+        "@sap/xssec": "^3.2.14",
+        "express": "^4",
+        "hdb": "^0.19.0",
+        "passport": "^0.6.0"
+    },
+    "devDependencies": {
+        "@sap/approuter": "9.0.x",
+        "@sap/eslint-plugin-ui5-jsdocs": "2.0.x",
+        "@sap/hdi-deploy": "4.5.0",
+        "@sap/html5-repo-mock": "2.0.x",
+        "@sap/ui5-builder-webide-extension": "1.0.x",
+        "@sapui5/ts-types": "1.71.x",
+        "@ui5/cli": "2.2.6",
+        "bestzip": "2.1.4",
+        "eslint": "5.16.x",
+        "rimraf": "3.0.2",
+        "sqlite3": "^5.0.4"
+    },
+    "scripts": {
+        "start": "cds run"
+    },
+    "engines": {
+        "node": "^16.15"
+    },
+    "eslintConfig": {
+        "extends": "eslint:recommended",
+        "env": {
+            "es2020": true,
+            "node": true,
+            "jest": true,
+            "mocha": true
+        },
+        "globals": {
+            "SELECT": true,
+            "INSERT": true,
+            "UPDATE": true,
+            "DELETE": true,
+            "CREATE": true,
+            "DROP": true,
+            "CDL": true,
+            "CQL": true,
+            "CXL": true,
+            "cds": true
+        },
+        "rules": {
+            "no-console": "off",
+            "require-atomic-updates": "off"
+        }
+    },
+    "cds": {
+        "requires": {
+            "db": {
+                "kind": "sql"
+            },
+            "uaa": {
+                "kind": "xsuaa"
+            },
+            "[development]": {
+                "auth": {
+                    "strategy": "mock",
+                    "users": {
+                        "displayUser": {
+                            "password": "creetion",
+                            "roles": [
+                                "display"
+                            ]
+                        },
+                        "changeUser": {
+                            "password": "creetion",
+                            "roles": [
+                                "change"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "hana": {
+            "deploy-format": "hdbtable"
+        }
+    },
+    "ui5": {
+        "dependencies": [
+            "@sap/ui5-builder-webide-extension"
+        ]
+    }
+}

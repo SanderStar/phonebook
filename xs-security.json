@@ -1,0 +1,31 @@
+{
+    "xsappname": "phonebook",
+    "tenant-mode": "dedicated",
+    "description": "Security profile of called application",
+    "scopes": [
+        {
+            "name": "$XSAPPNAME.display",
+            "description": "Display phonebook"
+        },
+        {
+            "name": "$XSAPPNAME.change",
+            "description": "Change phonebook"
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "display",
+            "description": "Display phonebook",
+            "scope-references": [
+                "$XSAPPNAME.display"
+            ]
+        },
+        {
+            "name": "change",
+            "description": "Change phonebook",
+            "scope-references": [
+                "$XSAPPNAME.change"
+            ]
+        }
+    ]
+}
