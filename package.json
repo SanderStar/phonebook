@@ -25,11 +25,17 @@
         "@ui5/cli": "2.2.6",
         "bestzip": "2.1.4",
         "eslint": "5.16.x",
+        "jest": "^29.2.2",
+        "jest-junit": "^14.0.1",
         "rimraf": "3.0.2",
-        "sqlite3": "^5.0.4"
+        "sqlite3": "^5.0.4",
+        "supertest": "^6.3.1"
     },
     "scripts": {
-        "start": "cds run"
+        "start": "cds run",
+        "test": "jest --config ./jest.config.js --watchAll --verbose",
+        "test-s": "jest --config ./jest.config.js --watchAll --verbose --silent",
+        "test-sb": "jest --config ./jest.config.js --watchAll --verbose --silent --runInBand"
     },
     "engines": {
         "node": "^16.15"
@@ -68,6 +74,25 @@
                 "kind": "xsuaa"
             },
             "[development]": {
+                "auth": {
+                    "strategy": "mock",
+                    "users": {
+                        "displayUser": {
+                            "password": "creetion",
+                            "roles": [
+                                "display"
+                            ]
+                        },
+                        "changeUser": {
+                            "password": "creetion",
+                            "roles": [
+                                "change"
+                            ]
+                        }
+                    }
+                }
+            },
+            "[test]": {
                 "auth": {
                     "strategy": "mock",
                     "users": {

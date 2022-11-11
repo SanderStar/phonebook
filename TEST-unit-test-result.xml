@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="11" failures="0" errors="0" time="2.362">
+  <testsuite name="PhonebookService - Phonebooks" errors="0" failures="0" skipped="0" timestamp="2022-11-04T14:25:46" time="2.194" tests="11">
+    <testcase classname="PhonebookService - Phonebooks ODATA Protocol Level Testing should return a $metadata document" name="PhonebookService - Phonebooks ODATA Protocol Level Testing should return a $metadata document" time="0.04">
+    </testcase>
+    <testcase classname="PhonebookService - Phonebooks ODATA Protocol Level Testing should NOT return a $metadata document for unknown user" name="PhonebookService - Phonebooks ODATA Protocol Level Testing should NOT return a $metadata document for unknown user" time="0.008">
+    </testcase>
+    <testcase classname="PhonebookService - Phonebooks ODATA Protocol Level Testing Phonebook should return isMobile true when type equals &apos;M&apos;" name="PhonebookService - Phonebooks ODATA Protocol Level Testing Phonebook should return isMobile true when type equals &apos;M&apos;" time="0.03">
+    </testcase>
+    <testcase classname="PhonebookService - Phonebooks CDS Service Level Testing should have Phonebooks entity" name="PhonebookService - Phonebooks CDS Service Level Testing should have Phonebooks entity" time="0.001">
+    </testcase>
+    <testcase classname="PhonebookService - Phonebooks CDS Service Level Testing READ Phonebooks should call and check isMobile always returns FALSE" name="PhonebookService - Phonebooks CDS Service Level Testing READ Phonebooks should call and check isMobile always returns FALSE" time="0.019">
+    </testcase>
+    <testcase classname="PhonebookService - Phonebooks CDS Service Level Testing READ Phonebooks should call and check isMobile always returns TRUE" name="PhonebookService - Phonebooks CDS Service Level Testing READ Phonebooks should call and check isMobile always returns TRUE" time="0.005">
+    </testcase>
+    <testcase classname="PhonebookService - Phonebooks CDS Service Level Testing getIsMobileValue should return true when type equals mobile" name="PhonebookService - Phonebooks CDS Service Level Testing getIsMobileValue should return true when type equals mobile" time="0.002">
+    </testcase>
+    <testcase classname="PhonebookService - Phonebooks CDS Service Level Testing getIsMobileValue should return false when type not equals mobile" name="PhonebookService - Phonebooks CDS Service Level Testing getIsMobileValue should return false when type not equals mobile" time="0">
+    </testcase>
+    <testcase classname="PhonebookService - Phonebooks CDS Service Level Testing getIsMobileValue should return false when type equals empty string" name="PhonebookService - Phonebooks CDS Service Level Testing getIsMobileValue should return false when type equals empty string" time="0.001">
+    </testcase>
+    <testcase classname="PhonebookService - Phonebooks CDS Service Level Testing getIsMobileValue should return false when type equals null" name="PhonebookService - Phonebooks CDS Service Level Testing getIsMobileValue should return false when type equals null" time="0.002">
+    </testcase>
+    <testcase classname="PhonebookService - Phonebooks CDS Service Level Testing getIsMobileValue should return false when type equals undefined" name="PhonebookService - Phonebooks CDS Service Level Testing getIsMobileValue should return false when type equals undefined" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>

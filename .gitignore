@@ -31,3 +31,6 @@ mta_archives/
 
 # auto generated wildcard
 .env1
+
+coverage
+

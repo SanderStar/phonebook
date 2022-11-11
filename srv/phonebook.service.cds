@@ -10,4 +10,15 @@ service PhonebookService {
         { grant: 'DELETE', to: ['change'] }
     ]
     entity Phonebooks as projection on creetion.Phonebook;
+
+    type UserInfo {
+        userID   : String;
+        role     : String;
+    }
+
+    @restrict: [
+         { grant: 'getUserInfo', to: ['display','change'] }
+    ]
+    function getUserInfo() returns UserInfo;
+    
 }
