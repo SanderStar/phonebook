@@ -29,7 +29,17 @@ class PhonebookService extends oCds.ApplicationService {
     
         this.after("READ", "Phonebooks", (aPhoneBook, oReq) => {
             // MANIPULATE DATA AFTER RETRIEVE AND BEFORE SEND BACK TO FIORI
-            aPhoneBook.forEach((oPhone) => {
+            const bResult = Array.isArray(aPhoneBook);
+            let aResults;
+            if (bResult) {
+                // Read delivers array
+                aResults = aPhoneBook;
+            } else {
+                // Create delivers object
+                aResults = [ aPhoneBook ];
+            }
+            console.log(aResults);
+            aResults.forEach((oPhone) => {
                 const bIsMobile = this.getIsMobileValue(oPhone.type);
                 if (bIsMobile) {
                     oPhone.isMobile = true;
